@@ -18,8 +18,8 @@ export default class InputHandler {
                 case 'ArrowLeft':
                     this.lastKey = 'RELEASE left...';
                     break
-                case 'ArrowDown':
-                    this.lastKey = 'RELEASE down...';
+                case 'ArrowRight':
+                    this.lastKey = 'RELEASE right...';
                     break
             }
         })
