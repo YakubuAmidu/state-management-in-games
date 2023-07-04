@@ -1,18 +1,26 @@
 export default class InputHandler {
     constructor(){
         this.lastKey = '';
-        
-        window.addEventListener('keydown', function(e){
+
+        window.addEventListener('keydown', (e) => {
             switch(e.key){
-                case 'ArrowDown':
-                    this.lastKey = 'Press Arrow down';
+                case 'ArrowLeft':
+                    this.lastKey = 'PRESS left...';
+                    break
+                case 'ArrowRight':
+                    this.lastKey = 'PRESS right...';
+                    break
             }
         });
 
-        window.addEventListener('keyup', function(e){
+        window.addEventListener('keyup', (e) => {
             switch(e.key){
-                case 'ArrowUp':
-                    this.lastKey = 'Press Arrow Up';
+                case 'ArrowLeft':
+                    this.lastKey = 'RELEASE left...';
+                    break
+                case 'ArrowDown':
+                    this.lastKey = 'RELEASE down...';
+                    break
             }
         })
     }
