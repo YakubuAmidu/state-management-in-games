@@ -4,8 +4,10 @@
   box-sizing: border-box;
   font-family: 'Helvetica', cursive; }
 
+body {
+  overflow: hidden; }
+
 canvas {
-  background: blue;
   top: 0;
   left: 0; }
 
