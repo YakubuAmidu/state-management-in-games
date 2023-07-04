@@ -7,10 +7,10 @@ export default class Player {
         this.image = document.getElementById('dogImage');
         this.width = 200;
         this.height = 181.83;
-        this.x = 0;
-        this.y = 0;
-        this.frameX = 5;
-        this.frameY = 4;
+        this.x = this.gameWidth / 2 - this.width / 2;
+        this.y = this.gameHeight - this.height;
+        this.frameX = 0;
+        this.frameY = 0;
     };
 
     draw(context){
