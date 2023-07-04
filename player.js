@@ -9,9 +9,11 @@ export default class Player {
         this.height = 181.83;
         this.x = 0;
         this.y = 0;
+        this.frameX = 5;
+        this.frameY = 4;
     };
 
     draw(context){
-        context.drawImage(this.image, this.x, this.y);
+        context.drawImage(this.image, this.width * this.frameX, this.height * this.frameY, this.width, this.height, this.x, this.y, this.width, this.height);
     }
 }
