@@ -19,7 +19,7 @@ export default class InputHandler {
         window.addEventListener('keyup', (e) => {
             switch(e.key){
                 case 'ArrowLeft':
-                    this.lastKey = 'RELEASE left...';
+                    this.lastKey = 'RELEASE left....';
                     break
                 case 'ArrowRight':
                     this.lastKey = 'RELEASE right...';
