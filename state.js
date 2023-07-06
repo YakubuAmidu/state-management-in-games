@@ -3,6 +3,7 @@ export const states = {
     STANDING_RIGHT: 1,
     SITTING_LEFT: 2,
     SITTING_RIGHT: 3,
+
 };
 
 class State {
@@ -13,7 +14,7 @@ class State {
 
 export class StandingLeft extends State {
     constructor(player){
-        super('STANDING_LEFT');
+        super('STANDING LEFT');
         this.player = player;
     }
 
@@ -29,7 +30,7 @@ export class StandingLeft extends State {
 
 export class StandingRight extends State {
     constructor(player){
-        super('STANDING_RIGHT');
+        super('STANDING RIGHT');
         this.player = player;
     }
 
@@ -45,7 +46,7 @@ export class StandingRight extends State {
 
 export class SittingLeft extends State {
     constructor(player){
-        super('SITTING_LEFT');
+        super('SITTING LEFT');
         this.player = player;
     }
 
@@ -61,7 +62,7 @@ export class SittingLeft extends State {
 
 export class SittingRight extends State {
     constructor(player){
-        super('SITTING_RIGHT');
+        super('SITTING RIGHT');
         this.player = player;
     }
 
