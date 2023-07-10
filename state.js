@@ -3,8 +3,8 @@ export const states = {
     STANDING_RIGHT: 1,
     SITTING_LEFT: 2,
     SITTING_RIGHT: 3,
-    RUNNING_LEFT: 4,
-    RUNNING_RIGHT: 5,
+    RUNNING_RIGHT: 4,
+    RUNNING_LEFT: 5,
 };
 
 class State {
@@ -24,7 +24,8 @@ export class StandingLeft extends State {
     }
 
     handleInput(input){
-      if(input === 'PRESS right') this.player.setState(states.STANDING_RIGHT);
+      if(input === 'PRESS right') this.player.setState(states.RUNNING_RIGHT);
+      else if (input === 'PRESS left') this.player.setState(states.RUNNING_LEFT);
       else if(input === 'PRESS down') this.player.setState(states.SITTING_LEFT);
     }
 }
@@ -40,7 +41,8 @@ export class StandingRight extends State {
     }
 
     handleInput(input){
-      if(input === 'PRESS left') this.player.setState(states.STANDING_LEFT);
+      if(input === 'PRESS left') this.player.setState(states.RUNNING_LEFT);
+      else if(input === 'PRESS right') this.player.setState(states.RUNNING_RIGHT);
       else if(input === 'PRESS down') this.player.setState(states.SITTING_RIGHT);
     }
 }
@@ -84,7 +86,7 @@ export class RunningLeft extends State {
     }
 
     enter(){
-        this.player.frameY = 0;
+        this.player.frameY = 7;
     }
 
     handleInput(input){
@@ -101,7 +103,7 @@ export class RunningRight extends State {
     }
 
     enter(){
-        this.player.frameY = 0;
+        this.player.frameY = 7;
     }
 
     handleInput(input){
