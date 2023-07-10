@@ -31,7 +31,7 @@ export default class Player {
        else if (this.x >= this.gameWidth - this.width) this.x = this.gameHeight - this.width;
        // Vertical movement
        this.y += this.vy;
-       if (this.y < this.gameHeight - this.height){
+       if (!this.onGround()){
         this.vy += this.weight;
        } else {
         this.vy = 0;
@@ -41,5 +41,9 @@ export default class Player {
     setState(state){
       this.currentState = this.states[state];
       this.currentState.enter();
+    }
+
+    onGround(){
+        return this.y >= this.gameHeight - this.height;
     }
 }
